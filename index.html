@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아바타 꾸미기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu.css">
+  </head>
+
+  <body>
+    <nav class="nav">
+      <button id="save-button" class="button">저장하기</button>
+    </nav>
+    <div class="container">
+      <div class="preview">
+        <div class="avatar-container">
+          <div id="avatar" class="avatar">
+            <img class="avatar-image" src="./images/avatar/tone_300.svg" data-image-key="tone">
+            <img class="avatar-image" src="./images/avatar/hoodie.svg" data-image-key="clothes">
+            <img class="avatar-image" src="./images/avatar/hair_short3-black.svg" data-image-key="hair">
+            <img class="avatar-image" src="./images/avatar/acc_none.svg" data-image-key="acc">
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+
+        <!--아바타 메뉴-->
+        <ul id="avatar-menu" class="avatar-menu">
+          <li class="avatar-menu-item active" data-avatar-key="tone">피부 톤</li>
+          <li class="avatar-menu-item" data-avatar-key="hair_type">머리 종류</li>
+          <li class="avatar-menu-item" data-avatar-key="hair_color">머리색</li>
+          <li class="avatar-menu-item" data-avatar-key="clothes">옷</li>
+          <li class="avatar-menu-item" data-avatar-key="acc">액세서리</li>
+        </ul>
+
+
+        <div class="avatar-selector-container">
+          <!-- 피부 톤 -->
+          <ul class="avatar-selector active" data-avatar-key="tone">
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_tone_100.svg')"
+                data-avatar-value="tone_100"></div>
+              <div class="avatar-selector-label">피부 톤 100</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_tone_200.svg')"
+                data-avatar-value="tone_200"></div>
+              <div class="avatar-selector-label">피부 톤 200</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_tone_300.svg')"
+                data-avatar-value="tone_300"></div>
+              <div class="avatar-selector-label">피부 톤 300</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_tone_400.svg')"
+                data-avatar-value="tone_400"></div>
+              <div class="avatar-selector-label">피부 톤 400</div>
+            </li>
+          </ul>
+        
+          <!-- 머리 종류 -->
+          <ul class="avatar-selector" data-avatar-key="hair_type">
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_hair_long1.svg')"
+                data-avatar-value="hair_long1"></div>
+              <div class="avatar-selector-label">긴 머리 1</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_hair_long2.svg')"
+                data-avatar-value="hair_long2"></div>
+              <div class="avatar-selector-label">긴 머리 2</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_hair_long3.svg')"
+                data-avatar-value="hair_long3"></div>
+              <div class="avatar-selector-label">긴 머리 3</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_hair_short1.svg')"
+                data-avatar-value="hair_short1"></div>
+              <div class="avatar-selector-label">짧은 머리 1</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_hair_short2.svg')"
+                data-avatar-value="hair_short2"></div>
+              <div class="avatar-selector-label">짧은 머리 2</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_hair_short3.svg')"
+                data-avatar-value="hair_short3"></div>
+              <div class="avatar-selector-label">짧은 머리 3</div>
+            </li>
+          </ul>
+        
+          <!-- 머리색 -->
+          <ul class="avatar-selector" data-avatar-key="hair_color">
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_color_black.svg')"
+                data-avatar-value="black">
+              </div>
+              <div class="avatar-selector-label">검정</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_color_blonde.svg')"
+                data-avatar-value="blonde"></div>
+              <div class="avatar-selector-label">금발</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_color_brown.svg')"
+                data-avatar-value="brown"></div>
+              <div class="avatar-selector-label">갈색</div>
+            </li>
+          </ul>
+        
+          <!-- 옷 -->
+          <ul class="avatar-selector" data-avatar-key="clothes">
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_collar_basic.svg')"
+                data-avatar-value="collar_basic"></div>
+              <div class="avatar-selector-label">기본 카라티</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_dress_formal.svg')"
+                data-avatar-value="dress_formal"></div>
+              <div class="avatar-selector-label">검은 드레스</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_hoodie.svg')"
+                data-avatar-value="hoodie"></div>
+              <div class="avatar-selector-label">후드티</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_jacket_leather.svg')"
+                data-avatar-value="jacket_leather"></div>
+              <div class="avatar-selector-label">가죽 재킷</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_knit_layered.svg')"
+                data-avatar-value="knit_layered"></div>
+              <div class="avatar-selector-label">니트 가디건</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_knit_vest.svg')"
+                data-avatar-value="knit_vest"></div>
+              <div class="avatar-selector-label">니트 조끼</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_tshirt_basic.svg')"
+                data-avatar-value="tshirt_basic"></div>
+              <div class="avatar-selector-label">기본 티셔츠</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_tshirt_printed.svg')"
+                data-avatar-value="tshirt_printed"></div>
+              <div class="avatar-selector-label">프린트 티셔츠</div>
+            </li>
+          </ul>
+        
+          <!-- 액세서리 -->
+          <ul class="avatar-selector" data-avatar-key="acc">
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_acc_ballcap.svg')"
+                data-avatar-value="acc_ballcap"></div>
+              <div class="avatar-selector-label">모자</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_acc_earbuds.svg')"
+                data-avatar-value="acc_earbuds"></div>
+              <div class="avatar-selector-label">이어폰</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_acc_earings.svg')"
+                data-avatar-value="acc_earings"></div>
+              <div class="avatar-selector-label">귀걸이</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_acc_headset.svg')"
+                data-avatar-value="acc_headset"></div>
+              <div class="avatar-selector-label">헤드셋</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_acc_nametag.svg')"
+                data-avatar-value="acc_nametag"></div>
+              <div class="avatar-selector-label">이름표</div>
+            </li>
+            <li class="avatar-selector-item">
+              <div
+                class="avatar-selector-preview"
+                style="background-image: url('./images/avatar/previews/preview_acc_none.svg')"
+                data-avatar-value="acc_none"></div>
+              <div class="avatar-selector-label">액세서리 없음</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
